@@ -4,9 +4,10 @@ Module contains coroutine called async_generator
 """
 import asyncio
 import random
+from typing import Generator
 
 
-async def async_generator():
+async def async_generator() -> Generator[float, None, None] :
     """
     Coroutine loops 10 times, each time asynchronously waits 1 secod,
     then yields a random number between 0 and 10
